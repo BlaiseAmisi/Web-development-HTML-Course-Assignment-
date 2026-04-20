@@ -1,0 +1,106 @@
+/* Blaise Amisi - 2025-02-17 */
+
+/* CSS Reset */
+body, header, nav, main, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 15px;
+}
+
+nav ul li {
+    display: block;
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Styles */
+.mobile {
+    display: block;
+}
+
+/* Hide tablet-desktop class by default */
+.tablet-desktop {
+    display: none;
+}
+
+/* Media Queries for Tablet */
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+}
+
+/* Media Queries for Desktop */
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: #ddd;
+    }
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 20px;
+    }
+
+    nav ul li a:hover {
+        color: #ff6600;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+.featured-product {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
